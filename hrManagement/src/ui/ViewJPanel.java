@@ -4,6 +4,8 @@
  */
 package ui;
 
+import javax.swing.table.DefaultTableModel;
+import manager.EmpDeclaration;
 import manager.EmpHistory;
 
 /**ß
@@ -20,7 +22,11 @@ public class ViewJPanel extends javax.swing.JPanel {
     
     public ViewJPanel(EmpHistory history) {
         initComponents();
+        
         this.history = history;
+        
+        populateTable();
+        
     }
 
     /**
@@ -325,4 +331,35 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtStartdate;
     private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
+
+    private void populateTable() {
+        
+        DefaultTableModel model = (DefaultTableModel) tblEmployee.getModel();
+        model.setRowCount(0);
+        
+        for (EmpDeclaration es: history.getHistory()){
+            
+            Object[] row = new Object[10];
+            row[0] = es.getName();
+            row[1] = es.getEmployeeID();
+            row[2] = es.getAge();
+            row[3] = es.getGender();
+            row[4] = es.getDate();
+            row[5] = es.getLevel();
+            row[6] = es.getTeamInfo();
+            row[7] = es.getPositionTitle();
+            row[8] = es.getPhoneNumber();
+            row[9] = es.getEmailAddress();
+            
+            model.addRow(row);
+            
+                    
+            
+            
+            
+            
+        }
+        
+        
+    }
 }
