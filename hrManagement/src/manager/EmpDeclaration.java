@@ -53,11 +53,11 @@ public class EmpDeclaration {
     }
 
     public String getDate() {
-        return Date;
+        return StartDate;
     }
 
-    public void setDate(String Date) {
-        this.Date = Date;
+    public void setDate(String StartDate) {
+        this.StartDate = StartDate;
     }
 
     public String getLevel() {
