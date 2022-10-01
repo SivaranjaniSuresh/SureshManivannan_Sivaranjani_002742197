@@ -305,6 +305,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         
         JOptionPane.showMessageDialog(this, "Employee Deleted");
         
+        populateTable();
+        
+        
+       
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed

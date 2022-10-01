@@ -102,6 +102,8 @@ public class EmpDeclaration {
     
     
     
+    
+    
 
     /**
      * @param args the command line arguments
@@ -110,12 +112,9 @@ public class EmpDeclaration {
         // TODO code application logic here
     }
 
-    public void setStartDate(String StartDate) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setEmployeeid(int EmployeeID) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    @Override
+    public String toString(){
+        return Name;
     }
     
 }
