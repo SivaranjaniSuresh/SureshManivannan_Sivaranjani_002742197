@@ -4,6 +4,8 @@
  */
 package ui;
 
+import manager.EmpHistory;
+
 /**
  *
  * @author sivaranjanisuresh
@@ -13,8 +15,10 @@ public class CreateJPanel extends javax.swing.JFrame {
     /**
      * Creates new form CreateJPanel
      */
-    public CreateJPanel() {
+    EmpHistory history
+    public CreateJPanel(EmpHistory history) {
         initComponents();
+        this.history = history();
     }
 
     /**
@@ -47,6 +51,7 @@ public class CreateJPanel extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,15 +138,19 @@ public class CreateJPanel extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Save");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(251, 251, 251)
-                        .addComponent(LabelName))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(146, 146, 146)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,7 +175,14 @@ public class CreateJPanel extends javax.swing.JFrame {
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(251, 251, 251)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LabelName)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(jButton1)))))
                 .addContainerGap(243, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -214,7 +230,9 @@ public class CreateJPanel extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addGap(58, 58, 58)
+                .addComponent(jButton1)
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         pack();
@@ -260,6 +278,49 @@ public class CreateJPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField11ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String Name = txtName.getText();
+        int EmployeeID Integer.parseInt(txtEmployeeID.getText());
+        int Age = Integer.parseInt(txtAge.getText());
+        String Gender = txtGender.getText();
+        String StartDate= txtStartDate.getText();
+        String Level = txtLevel.getText();
+        String TeamInfo = txtTeamInfo.getText();
+        String PositionTitle = txtPositionTitle.getText();
+        String PhoneNumber = txtPhoneNumber.getText();
+        String EmailAddress = txtEmailAddress.getText();
+        
+        
+        EmpDeclaration es = history.addNewEmpDeclaration();
+        es.setName(Name);
+        es.setEmployeeid(EmployeeID);
+        es.setAge(Age);
+        es.setGender(Gender);
+        es.setStartDate(StartDate);
+        es.setLevel(Level);
+        es.setTeamInfo(TeamInfo);
+        es.setPositionTitle(PositionTitle);
+        es.setPhoneNumber(PhoneNumber); 
+        es.setEmailAddress(EmailAddress);
+        
+        JOptionPane.showMessageDialog(this,"New Employee is added.");
+        txtName.setText("");
+        txtAge.setText("");
+        txtEID.setText("");
+        txtAge.setText("");
+        txtGender.setText("");
+        txtStrtDate.setText("");
+        txtLvl.setText("");
+        txtTeamInfo.setText("");
+        txtPosTitle.setText("");
+        txtCntctNo.setText("");
+        txtEmail.setText("");
+        
+        
+    }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -297,6 +358,7 @@ public class CreateJPanel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelName;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;

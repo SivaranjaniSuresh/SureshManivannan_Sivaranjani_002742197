@@ -13,7 +13,7 @@ public class EmpDeclaration {
     private int EmployeeID;
     private int Age;
     private String Gender;
-    private String Date;
+    private String StartDate;
     private String Level;
     private String TeamInfo;
     private String PositionTitle;
