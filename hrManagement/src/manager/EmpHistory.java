@@ -4,8 +4,8 @@
  */
 package manager;
 
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 /**
  *
  * @author sivaranjanisuresh
@@ -24,6 +24,7 @@ public class EmpHistory {
 
     public void setHistory(ArrayList<EmpDeclaration> history) {
         this.history = history;
+    }
         
     public EmpDeclaration addNewEmployee(){
         EmpDeclaration newEmpDeclaration = new EmpDeclaration();
@@ -36,16 +37,6 @@ public class EmpHistory {
     public EmpDeclaration addNewEmpDeclaration() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-            
-    }
-    
-    
-
-  
-    
-    
-    
-    
 }
 
     
