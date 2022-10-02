@@ -4,6 +4,13 @@
  */
 package ui;
 
+import javax.swing.RowFilter;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import manager.EmpDeclaration;
+import javax.swing.text.TableView.TableRow;
+import manager.EmpHistory;
+
 /**
  *
  * @author sivaranjanisuresh
@@ -13,6 +20,40 @@ public class SearchJPanel extends javax.swing.JPanel {
     /**
      * Creates new form SearchJPanel
      */
+    
+    EmpHistory history;
+    public SearchJPanel(EmpHistory history){
+        initComponents();
+        
+        this.history = history;
+        
+        populateTable();
+    }
+
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tblEmployee.getModel();
+        model.setRowCount(0);
+        
+        for (EmpDeclaration es: history.getHistory()){
+            
+            Object[] row = new Object[10];
+            row[0] = es;
+            row[1] = es.getEmployeeID();
+            row[2] = es.getAge();
+            row[3] = es.getGender();
+            row[4] = es.getDate();
+            row[5] = es.getLevel();
+            row[6] = es.getTeamInfo();
+            row[7] = es.getPositionTitle();
+            row[8] = es.getPhoneNumber();
+            row[9] = es.getEmailAddress();
+            
+            model.addRow(row);
+            
+            
+            
+    }
+    }
     public SearchJPanel() {
         initComponents();
     }
@@ -34,7 +75,9 @@ public class SearchJPanel extends javax.swing.JPanel {
 
         setFont(new java.awt.Font("Helvetica Neue", 1, 30)); // NOI18N
 
-        lblSearchTitle.setText("Search Employee");
+        lblSearchTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 30)); // NOI18N
+        lblSearchTitle.setText("          Search Employee");
+        lblSearchTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         txtSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,10 +117,6 @@ public class SearchJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addComponent(lblSearchTitle)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(142, 142, 142)
                 .addComponent(lblSearch)
@@ -88,13 +127,17 @@ public class SearchJPanel extends javax.swing.JPanel {
                 .addContainerGap(88, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(112, 112, 112)
+                .addComponent(lblSearchTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
-                .addComponent(lblSearchTitle)
-                .addGap(35, 35, 35)
+                .addComponent(lblSearchTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSearch))
@@ -111,6 +154,8 @@ public class SearchJPanel extends javax.swing.JPanel {
 
     private void txtSearchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchKeyReleased
         // TODO add your handling code here:
+        String findString = txtSearch.getText();
+        Search(findString);
         
         
     }//GEN-LAST:event_txtSearchKeyReleased
@@ -123,4 +168,13 @@ public class SearchJPanel extends javax.swing.JPanel {
     private javax.swing.JTable tblEmployee;
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
+
+    private void Search(String Str) {
+        
+        DefaultTableModel model = (DefaultTableModel) tblEmployee.getModel();
+        TableRowSorter<DefaultTableModel> trs = new TableRowSorter<>(model);
+        tblEmployee.setRowSorter(trs);
+        trs.setRowFilter(RowFilter.regexFilter(Str));
+        
+    }
 }

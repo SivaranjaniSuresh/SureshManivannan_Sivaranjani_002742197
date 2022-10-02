@@ -4,6 +4,9 @@
  */
 package manager;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author sivaranjanisuresh
@@ -19,7 +22,25 @@ public class EmpDeclaration {
     private String PositionTitle;
     private String PhoneNumber;
     private String EmailAddress;
+    private ImageIcon EmployeeImage;
 
+    public ImageIcon getEmployeeImage(int width, int height, int SCALE_SMOOTH) {
+        return EmployeeImage;
+    }
+
+    public void setEmployeeImage(ImageIcon EmployeeImage) {
+        this.EmployeeImage = (ImageIcon) EmployeeImage;
+    }
+
+    public String getStartDate() {
+        return StartDate;
+    }
+
+    public void setStartDate(String StartDate) {
+        this.StartDate = StartDate;
+    }
+
+  
     public String getName() {
         return Name;
     }
@@ -116,5 +137,6 @@ public class EmpDeclaration {
     public String toString(){
         return Name;
     }
-    
+
+   
 }
