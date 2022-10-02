@@ -63,6 +63,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblImg = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         btnUpdateprofile = new javax.swing.JButton();
+        GenderBox1 = new javax.swing.JComboBox<>();
 
         setAlignmentX(2.0F);
         setFont(new java.awt.Font("Helvetica Neue", 1, 30)); // NOI18N
@@ -99,6 +100,8 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtGender.setEditable(false);
+
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 30)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Add Employee");
@@ -118,6 +121,14 @@ public class CreateJPanel extends javax.swing.JPanel {
         btnUpdateprofile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateprofileActionPerformed(evt);
+            }
+        });
+
+        GenderBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Prefer Not to Say" }));
+        GenderBox1.setSelectedIndex(-1);
+        GenderBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GenderBox1ActionPerformed(evt);
             }
         });
 
@@ -142,7 +153,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                 .addComponent(txtPos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblNum)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
                                 .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblLevel)
@@ -156,14 +167,6 @@ public class CreateJPanel extends javax.swing.JPanel {
                                 .addComponent(lblInfo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txtInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblGender)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblAge)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(lblEid)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -175,19 +178,30 @@ public class CreateJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblEmail)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblAge)
+                                    .addComponent(lblGender))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtAge)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(GenderBox1, 0, 1, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblImg, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnUpdateprofile))))
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(329, 329, 329))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtEid, txtEmail, txtGender, txtInfo, txtLevel, txtName, txtNum, txtPos, txtStartdate});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtEid, txtEmail, txtInfo, txtLevel, txtName, txtNum, txtPos, txtStartdate});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,7 +231,8 @@ public class CreateJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(GenderBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblStartdate, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -276,6 +291,39 @@ public class CreateJPanel extends javax.swing.JPanel {
         String EmailAddress = txtEmail.getText();
         Icon EmployeeImage = lblImg.getIcon();
         
+        if( Name.isEmpty() ||  Gender.isEmpty() || StartDate.isEmpty() || Level.isEmpty() || TeamInfo.isEmpty()  || PositionTitle.isEmpty() || PhoneNumber.isEmpty() || EmailAddress.isEmpty() || String.valueOf(EmployeeID).isEmpty() || String.valueOf(Age).isEmpty() ) {
+            
+        
+           JOptionPane.showMessageDialog(this, "Feilds Cannot be empty ","Error",JOptionPane.ERROR_MESSAGE); 
+        txtName.setText("");
+        txtEid.setText("");
+        txtAge.setText("");
+        txtGender.setText("");
+        txtStartdate.setText("");
+        txtLevel.setText("");
+        txtInfo.setText("");
+        txtPos.setText("");
+        txtNum.setText("");
+        txtEmail.setText("");
+        lblImg.setIcon(null);
+        GenderBox1.setSelectedIndex(-1);
+        }
+        
+        else if(Age<18){
+            JOptionPane.showMessageDialog(this, "Age should be above 18. Please Enter Again ","Error",JOptionPane.ERROR_MESSAGE);
+            txtAge.setText("");
+        }
+        else if(PhoneNumber.length() != 10){
+            JOptionPane.showMessageDialog(this, "Phone Number must contain 10 digits. Please Enter Again ","Error",JOptionPane.ERROR_MESSAGE);
+            txtNum.setText("");
+        }
+        else if(!(EmailAddress.contains("@") && EmailAddress.contains("."))){
+            JOptionPane.showMessageDialog(this, "Invalid Email Address!! Enter valid Email Address Again","Error",JOptionPane.ERROR_MESSAGE);
+            txtEmail.setText("");
+        }
+        
+    
+        else{        
         EmpDeclaration es = history.addNewEmployee();
         
         es.setName(Name);
@@ -303,6 +351,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtNum.setText("");
         txtEmail.setText("");
         lblImg.setIcon(null);
+        GenderBox1.setSelectedIndex(-1);
+        }
+    
+        
     
         
         //JOptionPane.showMessageDialog(this, "No field can be empty.");
@@ -327,8 +379,15 @@ public class CreateJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnUpdateprofileActionPerformed
 
+    private void GenderBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenderBox1ActionPerformed
+        // TODO add your handling code here:
+        String Gender = (String)GenderBox1.getSelectedItem();
+        txtGender.setText(Gender);
+    }//GEN-LAST:event_GenderBox1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> GenderBox1;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdateprofile;
     private javax.swing.JLabel jLabel1;
