@@ -285,6 +285,30 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
+        int selectedRowIndex = tblEmployee.getSelectedRow();
+        
+        if(selectedRowIndex<0){
+            
+            JOptionPane.showMessageDialog(this, "Please Select a Row to Delete");
+            return;
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) tblEmployee.getModel();
+        EmpDeclaration selectedEmployee = (EmpDeclaration)model.getValueAt(selectedRowIndex, 0);
+        
+        txtName.setText(selectedEmployee.getName());
+        txtEid.setText(String.valueOf(selectedEmployee.getEmployeeID()));
+        txtAge.setText(String.valueOf(selectedEmployee.getAge()));
+        txtGender.setText(selectedEmployee.getGender());
+        txtStartdate.setText(selectedEmployee.getDate());
+        txtLevel.setText(selectedEmployee.getLevel());
+        txtInfo.setText(selectedEmployee.getTeamInfo());
+        txtPos.setText(selectedEmployee.getPositionTitle());
+        txtNum.setText(selectedEmployee.getPhoneNumber());
+        txtEmail.setText(selectedEmployee.getEmailAddress());
+        
+        
+        
     }//GEN-LAST:event_btnViewActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
