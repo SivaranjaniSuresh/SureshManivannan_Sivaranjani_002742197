@@ -61,7 +61,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblTitle = new javax.swing.JLabel();
         btnSave = new javax.swing.JButton();
         lblImg = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         btnUpdateprofile = new javax.swing.JButton();
         GenderBox1 = new javax.swing.JComboBox<>();
 
@@ -114,8 +113,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         });
 
         lblImg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel1.setText("Profile Photo");
 
         btnUpdateprofile.setText("Add Profile Photo");
         btnUpdateprofile.addActionListener(new java.awt.event.ActionListener() {
@@ -195,10 +192,6 @@ public class CreateJPanel extends javax.swing.JPanel {
                             .addComponent(lblImg, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnUpdateprofile))))
                 .addContainerGap(282, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(329, 329, 329))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtEid, txtEmail, txtInfo, txtLevel, txtName, txtNum, txtPos, txtStartdate});
@@ -208,10 +201,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblImg, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblImg, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblTitle)
                         .addGap(65, 65, 65)
@@ -390,7 +380,6 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> GenderBox1;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdateprofile;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblEid;
     private javax.swing.JLabel lblEmail;
