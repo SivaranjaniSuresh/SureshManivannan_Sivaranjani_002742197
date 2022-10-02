@@ -270,18 +270,18 @@ public class CreateJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         String Name = txtName.getText();
-        int EmployeeID = Integer.parseInt(txtEid.getText());
+        int employeeId = Integer.parseInt(txtEid.getText());
         int Age = Integer.parseInt(txtAge.getText());
         String Gender = txtGender.getText();
-        String StartDate = txtStartdate.getText();
+        String startDate = txtStartdate.getText();
         String Level = txtLevel.getText();
-        String TeamInfo = txtInfo.getText();
-        String PositionTitle = txtPos.getText();
-        String PhoneNumber = txtNum.getText();
-        String EmailAddress = txtEmail.getText();
-        Icon EmployeeImage = lblImg.getIcon();
+        String teamInfo = txtInfo.getText();
+        String positionTitle = txtPos.getText();
+        String phoneNumber = txtNum.getText();
+        String emailAddress = txtEmail.getText();
+        Icon employeeImage = lblImg.getIcon();
         
-        if( Name.isEmpty() ||  Gender.isEmpty() || StartDate.isEmpty() || Level.isEmpty() || TeamInfo.isEmpty()  || PositionTitle.isEmpty() || PhoneNumber.isEmpty() || EmailAddress.isEmpty() || String.valueOf(EmployeeID).isEmpty() || String.valueOf(Age).isEmpty() ) {
+        if( Name.isEmpty() ||  Gender.isEmpty() || startDate.isEmpty() || Level.isEmpty() || teamInfo.isEmpty()  || positionTitle.isEmpty() || phoneNumber.isEmpty() || emailAddress.isEmpty() || String.valueOf(employeeId).isEmpty() || String.valueOf(Age).isEmpty() ) {
             
         
            JOptionPane.showMessageDialog(this, "Feilds Cannot be empty ","Error",JOptionPane.ERROR_MESSAGE); 
@@ -303,11 +303,11 @@ public class CreateJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Age should be above 18. Please Enter Again ","Error",JOptionPane.ERROR_MESSAGE);
             txtAge.setText("");
         }
-        else if(PhoneNumber.length() != 10){
+        else if(phoneNumber.length() != 10){
             JOptionPane.showMessageDialog(this, "Phone Number must contain 10 digits. Please Enter Again ","Error",JOptionPane.ERROR_MESSAGE);
             txtNum.setText("");
         }
-        else if(!(EmailAddress.contains("@") && EmailAddress.contains("."))){
+        else if(!(emailAddress.contains("@") && emailAddress.contains("."))){
             JOptionPane.showMessageDialog(this, "Invalid Email Address!! Enter valid Email Address Again","Error",JOptionPane.ERROR_MESSAGE);
             txtEmail.setText("");
         }
@@ -317,16 +317,16 @@ public class CreateJPanel extends javax.swing.JPanel {
         EmpDeclaration es = history.addNewEmployee();
         
         es.setName(Name);
-        es.setEmployeeID(EmployeeID);
+        es.setemployeeId(employeeId);
         es.setAge(Age);
         es.setGender(Gender);
-        es.setDate(StartDate);
+        es.setDate(startDate);
         es.setLevel(Level);
-        es.setTeamInfo(TeamInfo);
-        es.setPositionTitle(PositionTitle);
-        es.setPhoneNumber(PhoneNumber); 
-        es.setEmailAddress(EmailAddress);
-        es.setEmployeeImage((ImageIcon) EmployeeImage);
+        es.setteamInfo(teamInfo);
+        es.setpositionTitle(positionTitle);
+        es.setphoneNumber(phoneNumber); 
+        es.setemailAddress(emailAddress);
+        es.setemployeeImage((ImageIcon) employeeImage);
     
         
         JOptionPane.showMessageDialog(this, "New Employee Added.");

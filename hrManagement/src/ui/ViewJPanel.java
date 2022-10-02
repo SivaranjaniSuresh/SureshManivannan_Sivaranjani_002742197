@@ -324,16 +324,16 @@ public class ViewJPanel extends javax.swing.JPanel {
         EmpDeclaration selectedEmployee = (EmpDeclaration)model.getValueAt(selectedRowIndex, 0);
         
         txtName.setText(selectedEmployee.getName());
-        txtEid.setText(String.valueOf(selectedEmployee.getEmployeeID()));
+        txtEid.setText(String.valueOf(selectedEmployee.getemployeeId()));
         txtAge.setText(String.valueOf(selectedEmployee.getAge()));
         txtGender.setText(selectedEmployee.getGender());
         txtStartdate.setText(selectedEmployee.getDate());
         txtLevel.setText(selectedEmployee.getLevel());
-        txtInfo.setText(selectedEmployee.getTeamInfo());
-        txtPos.setText(selectedEmployee.getPositionTitle());
-        txtNum.setText(selectedEmployee.getPhoneNumber());
-        txtEmail.setText(selectedEmployee.getEmailAddress());
-        lblImg.setIcon(selectedEmployee.getEmployeeImage(lblImg.getWidth(), lblImg.getHeight(), Image.SCALE_SMOOTH));
+        txtInfo.setText(selectedEmployee.getteamInfo());
+        txtPos.setText(selectedEmployee.getpositionTitle());
+        txtNum.setText(selectedEmployee.getphoneNumber());
+        txtEmail.setText(selectedEmployee.getemailAddress());
+        lblImg.setIcon(selectedEmployee.getemployeeImage(lblImg.getWidth(), lblImg.getHeight(), Image.SCALE_SMOOTH));
         
         
     }//GEN-LAST:event_btnViewActionPerformed
@@ -380,28 +380,28 @@ public class ViewJPanel extends javax.swing.JPanel {
         if(tblEmployee.getSelectedRowCount() == 1){
             
             String Name = txtName.getText();
-            int EmployeeID = Integer.parseInt(txtEid.getText());
+            int employeeId = Integer.parseInt(txtEid.getText());
             int Age = Integer.parseInt(txtAge.getText());
             String Gender = txtGender.getText();
-            String StartDate = txtStartdate.getText();
+            String startDate = txtStartdate.getText();
             String Level = txtLevel.getText();
-            String TeamInfo = txtInfo.getText();
-            String PositionTitle = txtPos.getText();
-            String PhoneNumber = txtNum.getText();
-            String EmailAddress = txtEmail.getText();
-            Icon EmployeeImage = lblImg.getIcon();
+            String teamInfo = txtInfo.getText();
+            String positionTitle = txtPos.getText();
+            String phoneNumber = txtNum.getText();
+            String emailAddress = txtEmail.getText();
+            Icon employeeImage = lblImg.getIcon();
             
             
             model.setValueAt(Name, tblEmployee.getSelectedRow(), 0);
-            model.setValueAt(EmployeeID, tblEmployee.getSelectedRow(), 1);
+            model.setValueAt(employeeId, tblEmployee.getSelectedRow(), 1);
             model.setValueAt(Age, tblEmployee.getSelectedRow(), 2);
             model.setValueAt(Gender, tblEmployee.getSelectedRow(), 3);
-            model.setValueAt(StartDate, tblEmployee.getSelectedRow(), 4);
+            model.setValueAt(startDate, tblEmployee.getSelectedRow(), 4);
             model.setValueAt(Level, tblEmployee.getSelectedRow(), 5);
-            model.setValueAt(TeamInfo, tblEmployee.getSelectedRow(), 6);
-            model.setValueAt(PositionTitle, tblEmployee.getSelectedRow(), 7);
-            model.setValueAt(PhoneNumber, tblEmployee.getSelectedRow(), 8);
-            model.setValueAt(EmailAddress, tblEmployee.getSelectedRow(), 9);
+            model.setValueAt(teamInfo, tblEmployee.getSelectedRow(), 6);
+            model.setValueAt(positionTitle, tblEmployee.getSelectedRow(), 7);
+            model.setValueAt(phoneNumber, tblEmployee.getSelectedRow(), 8);
+            model.setValueAt(emailAddress, tblEmployee.getSelectedRow(), 9);
         
             JOptionPane.showMessageDialog(this, "Selected row was updated successfully.");
             
@@ -480,15 +480,15 @@ public class ViewJPanel extends javax.swing.JPanel {
             
             Object[] row = new Object[10];
             row[0] = es;
-            row[1] = es.getEmployeeID();
+            row[1] = es.getemployeeId();
             row[2] = es.getAge();
             row[3] = es.getGender();
             row[4] = es.getDate();
             row[5] = es.getLevel();
-            row[6] = es.getTeamInfo();
-            row[7] = es.getPositionTitle();
-            row[8] = es.getPhoneNumber();
-            row[9] = es.getEmailAddress();
+            row[6] = es.getteamInfo();
+            row[7] = es.getpositionTitle();
+            row[8] = es.getphoneNumber();
+            row[9] = es.getemailAddress();
             
             model.addRow(row);
             

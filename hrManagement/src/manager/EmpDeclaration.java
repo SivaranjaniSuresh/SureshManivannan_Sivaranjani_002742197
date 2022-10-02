@@ -13,31 +13,31 @@ import javax.swing.ImageIcon;
  */
 public class EmpDeclaration {
     private String Name;
-    private int EmployeeID;
+    private int employeeId;
     private int Age;
     private String Gender;
-    private String StartDate;
+    private String startDate;
     private String Level;
-    private String TeamInfo;
-    private String PositionTitle;
-    private String PhoneNumber;
-    private String EmailAddress;
-    private ImageIcon EmployeeImage;
+    private String teamInfo;
+    private String positionTitle;
+    private String phoneNumber;
+    private String emailAddress;
+    private ImageIcon employeeImage;
 
-    public ImageIcon getEmployeeImage(int width, int height, int SCALE_SMOOTH) {
-        return EmployeeImage;
+    public ImageIcon getemployeeImage(int width, int height, int SCALE_SMOOTH) {
+        return employeeImage;
     }
 
-    public void setEmployeeImage(ImageIcon EmployeeImage) {
-        this.EmployeeImage = (ImageIcon) EmployeeImage;
+    public void setemployeeImage(ImageIcon employeeImage) {
+        this.employeeImage = (ImageIcon) employeeImage;
     }
 
-    public String getStartDate() {
-        return StartDate;
+    public String getstartDate() {
+        return startDate;
     }
 
-    public void setStartDate(String StartDate) {
-        this.StartDate = StartDate;
+    public void setstartDate(String startDate) {
+        this.startDate = startDate;
     }
 
   
@@ -49,12 +49,12 @@ public class EmpDeclaration {
         this.Name = Name;
     }
 
-    public int getEmployeeID() {
-        return EmployeeID;
+    public int getemployeeId() {
+        return employeeId;
     }
 
-    public void setEmployeeID(int EmployeeID) {
-        this.EmployeeID = EmployeeID;
+    public void setemployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
     public int getAge() {
@@ -74,11 +74,11 @@ public class EmpDeclaration {
     }
 
     public String getDate() {
-        return StartDate;
+        return startDate;
     }
 
-    public void setDate(String StartDate) {
-        this.StartDate = StartDate;
+    public void setDate(String startDate) {
+        this.startDate = startDate;
     }
 
     public String getLevel() {
@@ -89,36 +89,36 @@ public class EmpDeclaration {
         this.Level = Level;
     }
 
-    public String getTeamInfo() {
-        return TeamInfo;
+    public String getteamInfo() {
+        return teamInfo;
     }
 
-    public void setTeamInfo(String TeamInfo) {
-        this.TeamInfo = TeamInfo;
+    public void setteamInfo(String teamInfo) {
+        this.teamInfo = teamInfo;
     }
 
-    public String getPositionTitle() {
-        return PositionTitle;
+    public String getpositionTitle() {
+        return positionTitle;
     }
 
-    public void setPositionTitle(String PositionTitle) {
-        this.PositionTitle = PositionTitle;
+    public void setpositionTitle(String positionTitle) {
+        this.positionTitle = positionTitle;
     }
 
-    public String getPhoneNumber() {
-        return PhoneNumber;
+    public String getphoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhoneNumber(String PhoneNumber) {
-        this.PhoneNumber = PhoneNumber;
+    public void setphoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getEmailAddress() {
-        return EmailAddress;
+    public String getemailAddress() {
+        return emailAddress;
     }
 
-    public void setEmailAddress(String EmailAddress) {
-        this.EmailAddress = EmailAddress;
+    public void setemailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
     
     
