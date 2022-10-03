@@ -269,7 +269,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         if( Name.isEmpty() ||  Gender.isEmpty() || startDate.isEmpty() || Level.isEmpty() || teamInfo.isEmpty()  || positionTitle.isEmpty() || phoneNumber.isEmpty() || emailAddress.isEmpty() || String.valueOf(employeeId).isEmpty() || String.valueOf(Age).isEmpty() ) {
             
         
-           JOptionPane.showMessageDialog(this, "Feilds Cannot be empty ","Error",JOptionPane.ERROR_MESSAGE); 
+           JOptionPane.showMessageDialog(this, "Fields Cannot be empty ","Error",JOptionPane.ERROR_MESSAGE); 
         txtName.setText("");
         txtEid.setText("");
         txtAge.setText("");
