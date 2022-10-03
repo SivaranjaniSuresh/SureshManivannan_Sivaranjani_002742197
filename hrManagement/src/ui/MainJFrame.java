@@ -43,6 +43,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        controlPanel.setBackground(new java.awt.Color(153, 204, 255));
+
         btnAdd.setText("Add Employee");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +90,8 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jSplitPane1.setLeftComponent(controlPanel);
+
+        workArea.setBackground(new java.awt.Color(204, 204, 255));
 
         javax.swing.GroupLayout workAreaLayout = new javax.swing.GroupLayout(workArea);
         workArea.setLayout(workAreaLayout);
