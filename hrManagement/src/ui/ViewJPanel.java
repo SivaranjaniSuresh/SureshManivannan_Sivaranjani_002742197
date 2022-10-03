@@ -381,7 +381,19 @@ public class ViewJPanel extends javax.swing.JPanel {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
         
+        int selectedRowIndex = tblEmployee.getSelectedRow();
+        
+        if(selectedRowIndex<0){
+            
+            JOptionPane.showMessageDialog(this, "Please Select a Row to Update");
+            return;
+        }
+        
         DefaultTableModel model = (DefaultTableModel) tblEmployee.getModel();
+        EmpDeclaration selectedEmployee = (EmpDeclaration)model.getValueAt(selectedRowIndex, 0);
+        
+        
+      
         if(tblEmployee.getSelectedRowCount() == 1){
             
             String Name = txtName.getText();
@@ -395,6 +407,22 @@ public class ViewJPanel extends javax.swing.JPanel {
             String phoneNumber = txtNum.getText();
             String emailAddress = txtEmail.getText();
             Icon employeeImage = lblImg.getIcon();
+          
+            selectedEmployee.setName(Name);
+            selectedEmployee.setAge(Age);
+            selectedEmployee.setDate(startDate);
+            selectedEmployee.setGender(Gender);
+            selectedEmployee.setLevel(Level);
+            selectedEmployee.setteamInfo(teamInfo);
+            selectedEmployee.setpositionTitle(positionTitle);
+            selectedEmployee.setphoneNumber(phoneNumber);
+            selectedEmployee.setemailAddress(emailAddress);
+            selectedEmployee.setemployeeId(employeeId);
+            selectedEmployee.setemployeeImage((ImageIcon)employeeImage); 
+            
+           
+            history.updateEmployee(selectedEmployee, selectedRowIndex);
+            
             
             
             model.setValueAt(Name, tblEmployee.getSelectedRow(), 0);

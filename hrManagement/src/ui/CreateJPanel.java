@@ -297,6 +297,10 @@ public class CreateJPanel extends javax.swing.JPanel {
             txtEmail.setText("");
         }
         
+        else if(lblImg.getIcon()== null){
+            JOptionPane.showMessageDialog(this, "Please Upload Image");
+        }
+        
     
         else{        
         EmpDeclaration es = history.addNewEmployee();

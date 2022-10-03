@@ -33,10 +33,16 @@ public class EmpHistory {
         
         
     }
+    
 
     public void deleteEmployee(EmpDeclaration es){
         
         history.remove(es);
+    }
+    
+    public void updateEmployee(EmpDeclaration es, int rowindex){
+        
+        history.set(rowindex,es);
     }
 }
 
