@@ -70,7 +70,7 @@
                       </Group>
                   </Group>
                   <EmptySpace pref="7" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                           <Component id="txtFname" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtAge" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -81,10 +81,7 @@
                           <Component id="txtAddress" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jComboBox3" min="-2" pref="72" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jComboBox3" alignment="1" min="-2" pref="145" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
               </Group>
