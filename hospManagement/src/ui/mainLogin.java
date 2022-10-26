@@ -57,6 +57,7 @@ public class mainLogin extends javax.swing.JPanel {
             }
         });
 
+        lblTitlelogin.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblTitlelogin.setText("Login");
 
         lblName.setText("User Name:");
@@ -113,7 +114,7 @@ public class mainLogin extends javax.swing.JPanel {
                     .addComponent(cbchooseOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLogin)
-                .addContainerGap(568, Short.MAX_VALUE))
+                .addContainerGap(555, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
