@@ -97,11 +97,11 @@ public class communityManager extends javax.swing.JPanel {
                         .addComponent(lblhospArea)
                         .addGap(122, 122, 122)
                         .addComponent(cboptionHosp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(282, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(246, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblTitle)
-                .addGap(163, 163, 163))
+                .addGap(177, 177, 177))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,6 +134,7 @@ public class communityManager extends javax.swing.JPanel {
 
     private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtCityActionPerformed
 
     private void txtzipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtzipCodeActionPerformed
