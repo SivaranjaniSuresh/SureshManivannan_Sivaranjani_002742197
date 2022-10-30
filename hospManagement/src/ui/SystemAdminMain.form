@@ -21,23 +21,26 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="212" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="317" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnmDoctor" alignment="1" min="-2" pref="177" max="-2" attributes="0"/>
-                          <Component id="btnmCommunity" alignment="1" min="-2" pref="177" max="-2" attributes="0"/>
+                  <Component id="btnmDoctor" min="-2" pref="177" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnmPatient" min="-2" pref="179" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="btnmPatient" min="-2" pref="179" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="btnmCommunity" pref="177" max="32767" attributes="0"/>
+                              <Component id="lblhospAdmin" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
           </Group>
@@ -50,11 +53,13 @@
               <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Component id="btnmPatient" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Component id="btnmDoctor" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Component id="btnmCommunity" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="429" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="lblhospAdmin" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace pref="507" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -84,6 +89,11 @@
           <Font name="Helvetica Neue" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="SYSTEM ADMIN LOGIN"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblhospAdmin">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hospital Administrator"/>
       </Properties>
     </Component>
   </SubComponents>

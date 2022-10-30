@@ -30,6 +30,7 @@ public class SystemAdminMain extends javax.swing.JPanel {
         btnmDoctor = new javax.swing.JButton();
         btnmCommunity = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
+        lblhospAdmin = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(800, 800));
 
@@ -47,24 +48,28 @@ public class SystemAdminMain extends javax.swing.JPanel {
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblTitle.setText("SYSTEM ADMIN LOGIN");
 
+        lblhospAdmin.setText("Hospital Administrator");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(212, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(317, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblTitle)
-                        .addGap(211, 211, 211))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnmDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnmCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(304, 304, 304))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnmPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                    .addComponent(btnmDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(lblTitle)
+                            .addGap(211, 211, 211))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnmPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(btnmCommunity, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                                .addComponent(lblhospAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(304, 304, 304)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -73,11 +78,13 @@ public class SystemAdminMain extends javax.swing.JPanel {
                 .addComponent(lblTitle)
                 .addGap(43, 43, 43)
                 .addComponent(btnmPatient)
-                .addGap(23, 23, 23)
+                .addGap(33, 33, 33)
                 .addComponent(btnmDoctor)
-                .addGap(38, 38, 38)
+                .addGap(28, 28, 28)
                 .addComponent(btnmCommunity)
-                .addContainerGap(429, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(lblhospAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(507, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -91,5 +98,6 @@ public class SystemAdminMain extends javax.swing.JPanel {
     private javax.swing.JButton btnmDoctor;
     private javax.swing.JButton btnmPatient;
     private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblhospAdmin;
     // End of variables declaration//GEN-END:variables
 }
