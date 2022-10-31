@@ -83,7 +83,7 @@ public class mainJframe1 extends javax.swing.JFrame {
 
         lblGender.setText("Gender");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient", "Doctor", "Community Manager" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient", "Doctor", "Community Manager", "Hospital Admin" }));
 
         cbGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male", "Other", "Prefer Not To Say" }));
         cbGender.addActionListener(new java.awt.event.ActionListener() {
